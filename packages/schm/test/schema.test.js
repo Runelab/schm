@@ -33,6 +33,20 @@ test("custom parse", () => {
   });
 });
 
+test("custom parse empty", () => {
+  const schm = schema({
+    foo_bar: {
+      type: [schema({ bar_baz: String })]
+    },
+  })
+  const values = {
+    foo_bar: null,
+  };
+  expect(schm.parse(values)).toEqual({
+    foo_bar:null
+  });
+});
+
 test("custom validate", async () => {
   const customValidate = constraints => previous =>
     previous.merge({

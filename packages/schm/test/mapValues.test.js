@@ -16,6 +16,13 @@ const createClass = () => ({
   students: times(5, createStudent)
 });
 
+const createEmptyClass = () => ({
+  grade: 5,
+  subject: lorem.word(),
+  teacher: createTeacher(),
+  students: null
+});
+
 const personSchema = schema({
   name: String,
   age: Number

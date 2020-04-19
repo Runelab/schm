@@ -42,3 +42,22 @@ Object {
   },
 }
 `;
+
+exports[`maps values correctly on empty array 1`] = `
+Object {
+  "grade": 5,
+  "students": Array [
+    null,
+  ],
+  "subject": "optio",
+  "teacher": Object {
+    "age": 20,
+    "name": "Mervin",
+    "subjects": Array [
+      "quis",
+      "molestiae",
+      "tempora",
+    ],
+  },
+}
+`;
